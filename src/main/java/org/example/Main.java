@@ -23,6 +23,6 @@ public class Main {
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
-
+        System.out.println("ciao");
     }
 }
