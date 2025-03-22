@@ -35,8 +35,33 @@ public class GamePanel extends JPanel implements Runnable {
 
         System.out.println("ciao");
         while (gameThread.isAlive()) {
+
+            // 1: UPDATE nuove informazioni
+            update();
+
+            // 2: DRAW ridisegna lo screen
+            repaint();
+
+
             System.out.println("gameThread is running");
         }
 
+    }
+
+    private void update() {
+     }
+
+    public void paintComponent(Graphics g) {
+
+        super.paintComponent(g);
+
+        //creo nuova cosa
+        Graphics2D g2 = (Graphics2D) g;
+
+        g2.setColor(Color.WHITE);
+
+        g2.fillRect(200, 200, tileSize, tileSize);
+
+        g2.dispose();
     }
 }
