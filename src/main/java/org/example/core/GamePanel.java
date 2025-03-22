@@ -16,6 +16,8 @@ public class GamePanel extends JPanel implements Runnable {
     final int screenWidth = maxScreenColumn * tileSize; // 768 px
     final int screenHeight = maxScreenRow * tileSize; // 576 px
 
+    Thread gameThread;
+
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
@@ -23,13 +25,18 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void startGameThread() {
-        Thread thread = new Thread(this);
-        thread.start();
+        gameThread = new Thread(this);
+        gameThread.start();
     }
 
 
     @Override
     public void run() {
+
+        System.out.println("ciao");
+        while (gameThread.isAlive()) {
+            System.out.println("gameThread is running");
+        }
 
     }
 }
