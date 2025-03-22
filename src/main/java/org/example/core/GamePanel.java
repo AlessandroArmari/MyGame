@@ -18,10 +18,14 @@ public class GamePanel extends JPanel implements Runnable {
 
     Thread gameThread;
 
+    KeyHandler kh = new KeyHandler();
+
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
+        this.addKeyListener(kh);
+        this.setFocusable(true);
     }
 
     public void startGameThread() {
@@ -33,7 +37,6 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
 
-        System.out.println("ciao");
         while (gameThread.isAlive()) {
 
             // 1: UPDATE nuove informazioni
@@ -42,8 +45,6 @@ public class GamePanel extends JPanel implements Runnable {
             // 2: DRAW ridisegna lo screen
             repaint();
 
-
-            System.out.println("gameThread is running");
         }
 
     }

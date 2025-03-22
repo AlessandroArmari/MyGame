@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="ciao">
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="updat e redraw">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/KeyCon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
     </list>
@@ -117,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742657490228</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updat e redraw">
+      <option name="closed" value="true" />
+      <created>1742661375509</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742661375509</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,14 +146,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ciao" />
-    <option name="LAST_COMMIT_MESSAGE" value="ciao" />
+    <MESSAGE value="updat e redraw" />
+    <option name="LAST_COMMIT_MESSAGE" value="updat e redraw" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java</url>
-          <line>36</line>
+          <line>39</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
