@@ -11,8 +11,15 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 
+@Getter
+@Setter
 @NoArgsConstructor
 public class KeyHandler implements KeyListener {
+
+    public Boolean upPressed = false;
+    public Boolean downPressed = false;
+    public Boolean leftPressed = false;
+    public Boolean rightPressed = false;
 
     private final Map<Integer, Consumer<Boolean>> mapKeyAction = Map.of(
             KeyEvent.VK_W, this::setUpPressed,
@@ -28,28 +35,32 @@ public class KeyHandler implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        mapKeyAction.get(e.getKeyCode()).accept(true);
+        mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {} ).accept(true);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        mapKeyAction.get(e.getKeyCode()).accept(false);
+        mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {}).accept(false);
     }
 
 
     public void setUpPressed(boolean bool) {
         System.out.println(KeyCon.UP + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+        this.upPressed = bool;
     }
 
     public void setDownPressed(boolean bool) {
         System.out.println(KeyCon.DOWN + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+        this.downPressed = bool;
     }
 
     public void setLeftPressed(boolean bool) {
         System.out.println(KeyCon.LEFT + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+        this.leftPressed = bool;
     }
 
     public void setRightPressed(boolean bool) {
         System.out.println(KeyCon.RIGHT + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+        this.rightPressed = bool;
     }
 }

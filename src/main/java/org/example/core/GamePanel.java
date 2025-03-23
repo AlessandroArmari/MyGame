@@ -6,7 +6,7 @@ import java.awt.*;
 public class GamePanel extends JPanel implements Runnable {
 
     //SCREEN SETTINGS
-    final int originalTileSize = 16; // 16x15 px
+    final int originalTileSize = 16; // 16x16 px
     final int scale = 3;
 
     final int tileSize = originalTileSize * scale; // 48x48 px
@@ -18,8 +18,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     int playerX = 200;
     int playerY = 200;
-    int playerSpeed =  4;
-
+    int playerSpeed = 4;
 
     Thread gameThread;
 
@@ -55,7 +54,12 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     private void update() {
-     }
+
+        if (kh.upPressed) {
+            playerX -= 1;
+        }
+
+    }
 
     public void paintComponent(Graphics g) {
 

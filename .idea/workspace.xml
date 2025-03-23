@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="updat e redraw">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/MapCon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="KeyHandler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyGame.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" afterDir="false" />
     </list>
@@ -120,7 +115,7 @@
       <workItem from="1742656404200" duration="380000" />
       <workItem from="1742752717936" duration="32000" />
       <workItem from="1742752769677" duration="294000" />
-      <workItem from="1742753077532" duration="1972000" />
+      <workItem from="1742753077532" duration="3793000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -138,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742661375509</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="KeyHandler">
+      <option name="closed" value="true" />
+      <created>1742755826031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742755826031</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,17 +161,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ciao" />
     <MESSAGE value="updat e redraw" />
-    <option name="LAST_COMMIT_MESSAGE" value="updat e redraw" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="KeyHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="KeyHandler" />
   </component>
 </project>
