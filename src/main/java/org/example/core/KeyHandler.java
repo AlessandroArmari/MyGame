@@ -1,72 +1,55 @@
 package org.example.core;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.example.constants.KeyCon;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Map;
+import java.util.function.Consumer;
 
+
+@NoArgsConstructor
 public class KeyHandler implements KeyListener {
 
-    private boolean upPressed;
-    private boolean downPressed;
-    private boolean leftPressed;
-    private boolean rightPressed;
+    private final Map<Integer, Consumer<Boolean>> mapKeyAction = Map.of(
+            KeyEvent.VK_W, this::setUpPressed,
+            KeyEvent.VK_S, this::setDownPressed,
+            KeyEvent.VK_A, this::setLeftPressed,
+            KeyEvent.VK_D, this::setRightPressed
+    );
+
 
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-
-        int code = e.getKeyCode();
-
-        if (e.getKeyCode() == KeyEvent.VK_W) {
-            upPressed = true;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_S) {
-            downPressed = true;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_A) {
-            leftPressed = true;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_D) {
-            rightPressed = true;
-        }
-
+        mapKeyAction.get(e.getKeyCode()).accept(true);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
-        int code = e.getKeyCode();
-
-        if (e.getKeyCode() == KeyEvent.VK_W) {
-            logBtnPressed(KeyCon.UP);
-            upPressed = false;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_S) {
-            logBtnPressed(KeyCon.DOWN);
-            downPressed = false;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_A) {
-            logBtnPressed(KeyCon.LEFT);
-            leftPressed = false;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_D) {
-            logBtnPressed(KeyCon.RIGHT);
-            rightPressed = false;
-        }
+        mapKeyAction.get(e.getKeyCode()).accept(false);
     }
 
-    private void logBtnPressed(String button) {
-        System.out.println(button + KeyCon.PRESSED);
+
+    public void setUpPressed(boolean bool) {
+        System.out.println(KeyCon.UP + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+    }
+
+    public void setDownPressed(boolean bool) {
+        System.out.println(KeyCon.DOWN + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+    }
+
+    public void setLeftPressed(boolean bool) {
+        System.out.println(KeyCon.LEFT + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
+    }
+
+    public void setRightPressed(boolean bool) {
+        System.out.println(KeyCon.RIGHT + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
     }
 }

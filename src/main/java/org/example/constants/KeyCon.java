@@ -8,4 +8,6 @@ public class KeyCon {
     public static final String RIGHT = "right";
 
     public static final String PRESSED = " pressed";
+    public static final String RELEASED = " released";
+
 }

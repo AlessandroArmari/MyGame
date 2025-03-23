@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="updat e redraw">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/KeyCon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/MapCon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyGame.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +60,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
+    "Maven.MyGame [clean].executor": "Run",
+    "Maven.MyGame [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Armandeiro/Desktop",
@@ -69,6 +76,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -110,6 +118,9 @@
       <updated>1742653824597</updated>
       <workItem from="1742653825702" duration="2560000" />
       <workItem from="1742656404200" duration="380000" />
+      <workItem from="1742752717936" duration="32000" />
+      <workItem from="1742752769677" duration="294000" />
+      <workItem from="1742753077532" duration="1972000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -153,9 +164,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
