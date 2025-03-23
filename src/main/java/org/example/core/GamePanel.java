@@ -20,6 +20,10 @@ public class GamePanel extends JPanel implements Runnable {
     int playerY = 200;
     int playerSpeed = 4;
 
+    int FPS = 60;
+    long deltaTime = 1000000000 / FPS;  // -> 16.666.666,66666667
+
+
     Thread gameThread;
 
     KeyHandler kh = new KeyHandler();
@@ -41,7 +45,15 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
 
+        /*
+        int counter = 0;
+        long lastCurrentTime = 0L;
+         */
+
         while (gameThread.isAlive()) {
+
+            long currentTime = System.nanoTime();
+            long nextTime = currentTime + deltaTime;
 
             // 1: UPDATE nuove informazioni
             update();
@@ -49,14 +61,44 @@ public class GamePanel extends JPanel implements Runnable {
             // 2: DRAW ridisegna lo screen
             repaint();
 
+
+
+            /*
+            long currentTime = System.currentTimeMillis();
+
+            //per il numero di giri compitui dal while a ogni secondo
+            if (currentTime - lastCurrentTime > 1000) {
+                System.out.println(counter);
+                lastCurrentTime = currentTime;
+                counter = 0;
+            }
+            counter++;
+
+             */
+
+
+
         }
 
     }
 
+
     private void update() {
 
         if (kh.upPressed) {
-            playerX -= 1;
+            playerX -= playerSpeed;
+        }
+
+        if (kh.downPressed) {
+            playerX += playerSpeed;
+        }
+
+        if (kh.leftPressed) {
+            playerY -= playerSpeed;
+        }
+
+        if (kh.rightPressed) {
+            playerY += playerSpeed;
         }
 
     }
