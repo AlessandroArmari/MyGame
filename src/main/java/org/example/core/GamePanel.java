@@ -11,12 +11,8 @@ import java.awt.*;
 public class GamePanel extends JPanel implements Runnable {
 
     Player player = new Player();
-
     Thread gameThread;
-
-    Update update = new Update();
     GameLoop gameLoop = new GameLoop();
-    PaintComponent paintComponent = new PaintComponent();
     KeyHandler kh = new KeyHandler();
 
     public GamePanel() {

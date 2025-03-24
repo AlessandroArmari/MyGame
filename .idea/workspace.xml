@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="DONE">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/down2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/left1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/left2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/right1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/right2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/up1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Player/up2.png" afterDir="false" />
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="pupazzetto moves">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" afterDir="false" />
     </list>
@@ -63,7 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Maven.MyGame [clean].executor": "Run",
     "Maven.MyGame [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -133,7 +126,7 @@
       <workItem from="1742752717936" duration="32000" />
       <workItem from="1742752769677" duration="294000" />
       <workItem from="1742753077532" duration="6558000" />
-      <workItem from="1742803642499" duration="18074000" />
+      <workItem from="1742803642499" duration="21213000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -231,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742818572703</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="pupazzetto moves">
+      <option name="closed" value="true" />
+      <created>1742825251966</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742825251966</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +274,8 @@
     <MESSAGE value="rincapsulo" />
     <MESSAGE value="rincapsulo 2" />
     <MESSAGE value="DONE" />
-    <option name="LAST_COMMIT_MESSAGE" value="DONE" />
+    <MESSAGE value="pupazzetto moves" />
+    <option name="LAST_COMMIT_MESSAGE" value="pupazzetto moves" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
