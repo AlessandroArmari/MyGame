@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="pupazzetto si muove bene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Update.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,14 +54,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Maven.MyGame [clean].executor": "Run",
     "Maven.MyGame [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/a.armari/Desktop/MyGame/src/entity",
+    "last_opened_file_path": "C:/Users/Armandeiro/Desktop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,15 +74,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\a.armari\Desktop\MyGame\src\entity" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\a.armari\Desktop\MyGame\src\main\resources\player" />
-      <recent name="C:\Users\a.armari\Desktop\MyGame\src\main\java\org\example" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -108,8 +97,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -126,7 +115,6 @@
       <workItem from="1742752717936" duration="32000" />
       <workItem from="1742752769677" duration="294000" />
       <workItem from="1742753077532" duration="6558000" />
-      <workItem from="1742803642499" duration="22995000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -160,87 +148,7 @@
       <option name="project" value="LOCAL" />
       <updated>1742759851909</updated>
     </task>
-    <task id="LOCAL-00005" summary="bonitasfot?">
-      <option name="closed" value="true" />
-      <created>1742803887744</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742803887744</updated>
-    </task>
-    <task id="LOCAL-00006" summary="THREAD">
-      <option name="closed" value="true" />
-      <created>1742805333565</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742805333565</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update incapsulato">
-      <option name="closed" value="true" />
-      <created>1742809234081</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1742809234081</updated>
-    </task>
-    <task id="LOCAL-00008" summary="COMMITTINO">
-      <option name="closed" value="true" />
-      <created>1742810230116</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1742810230116</updated>
-    </task>
-    <task id="LOCAL-00009" summary="staccato paintComponent">
-      <option name="closed" value="true" />
-      <created>1742811067846</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1742811067846</updated>
-    </task>
-    <task id="LOCAL-00010" summary="rincapsulo">
-      <option name="closed" value="true" />
-      <created>1742817056051</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1742817056051</updated>
-    </task>
-    <task id="LOCAL-00011" summary="rincapsulo 2">
-      <option name="closed" value="true" />
-      <created>1742818116568</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1742818116568</updated>
-    </task>
-    <task id="LOCAL-00012" summary="DONE">
-      <option name="closed" value="true" />
-      <created>1742818572703</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1742818572703</updated>
-    </task>
-    <task id="LOCAL-00013" summary="pupazzetto moves">
-      <option name="closed" value="true" />
-      <created>1742825251966</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1742825251966</updated>
-    </task>
-    <task id="LOCAL-00014" summary="pupazzetto si muove bene">
-      <option name="closed" value="true" />
-      <created>1742828422529</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1742828422529</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,19 +159,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -274,27 +170,6 @@
     <MESSAGE value="updat e redraw" />
     <MESSAGE value="KeyHandler" />
     <MESSAGE value="no" />
-    <MESSAGE value="bonitasfot?" />
-    <MESSAGE value="THREAD" />
-    <MESSAGE value="update incapsulato" />
-    <MESSAGE value="COMMITTINO" />
-    <MESSAGE value="staccato paintComponent" />
-    <MESSAGE value="rincapsulo" />
-    <MESSAGE value="rincapsulo 2" />
-    <MESSAGE value="DONE" />
-    <MESSAGE value="pupazzetto moves" />
-    <MESSAGE value="pupazzetto si muove bene" />
-    <option name="LAST_COMMIT_MESSAGE" value="pupazzetto si muove bene" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/Update.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="no" />
   </component>
 </project>

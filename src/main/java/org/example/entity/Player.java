@@ -83,46 +83,21 @@ public class Player extends Entity {
         //g2.setColor(Color.RED);
         //g2.fillRect(this.X, this.Y, GraphicCon.tileSize, GraphicCon.tileSize);
 
-        BufferedImage image = null;
+        BufferedImage image = switch (direction) {
 
-        switch (direction) {
-            case KeyCon.UP -> {
-                if (spriteNum == 1) {
-                    image = up1;
-                } else {
-                    image = up2;
-                }
-            }
+            case KeyCon.UP -> (spriteNum == 1) ? up1 : up2;
 
-            case KeyCon.DOWN -> {
-                if (spriteNum == 1) {
-                    image = down1;
-                } else {
-                    image = down2;
-                }
-            }
+            case KeyCon.DOWN -> (spriteNum == 1) ? down1 : down2;
 
-            case KeyCon.LEFT -> {
-                if (spriteNum == 1) {
-                    image = left1;
-                } else {
-                    image = left2;
-                }
-            }
+            case KeyCon.LEFT -> (spriteNum == 1) ? left1 : left2;
 
-            case KeyCon.RIGHT -> {
-                if (spriteNum == 1) {
-                    image = right1;
-                } else {
-                    image = right2;
-                }
-            }
-            default -> {
-            }
-        }
+            case KeyCon.RIGHT -> (spriteNum == 1) ? right1 : right2;
+
+            default -> (null);
+        };
 
         g2.drawImage(image, X, Y, GraphicCon.tileSize, GraphicCon.tileSize, null);
     }
 
-
 }
+
