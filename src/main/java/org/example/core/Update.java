@@ -1,7 +1,8 @@
-package org.example.constants;
+package org.example.core;
 
 import org.example.character.CharacterPosition;
-import org.example.core.KeyHandler;
+import org.example.constants.GameCon;
+import org.example.constants.KeyCon;
 
 public class Update {
 

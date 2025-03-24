@@ -2,25 +2,13 @@ package org.example.core;
 
 import org.example.character.CharacterPosition;
 import org.example.constants.GameCon;
-import org.example.constants.Update;
+import org.example.constants.GraphicCon;
 
 import javax.swing.*;
 import java.awt.*;
 
 
 public class GamePanel extends JPanel implements Runnable {
-
-    //SCREEN SETTINGS
-    final int originalTileSize = 16; // 16x16 px
-    final int scale = 3;
-
-    final int tileSize = originalTileSize * scale; // 48x48 px
-    final int maxScreenColumn = 16;
-    final int maxScreenRow = 12;
-
-    final int screenWidth = maxScreenColumn * tileSize; // 768 px
-    final int screenHeight = maxScreenRow * tileSize; // 576 px
-
     CharacterPosition charPosition = CharacterPosition.builder()
             .X(200)
             .Y(200)
@@ -30,12 +18,11 @@ public class GamePanel extends JPanel implements Runnable {
 
     Update update = new Update();
     GameLoop gameLoop = new GameLoop();
-
-
+    PaintComponent paintComponent = new PaintComponent();
     KeyHandler kh = new KeyHandler();
 
     public GamePanel() {
-        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
+        this.setPreferredSize(new Dimension(GraphicCon.screenWidth, GraphicCon.screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
         this.addKeyListener(kh);
@@ -64,22 +51,15 @@ public class GamePanel extends JPanel implements Runnable {
             nextDrawTime = gameLoop.gameLoop(nextDrawTime);
 
         }
-
     }
-
 
     public void paintComponent(Graphics g) {
-
         super.paintComponent(g);
-
-        //creo nuova cosa
-        Graphics2D g2 = (Graphics2D) g;
-
-        g2.setColor(Color.RED);
-
-        g2.fillRect(charPosition.X, charPosition.Y, tileSize, tileSize);
-
-        g2.dispose();
+        paintComponent.paintComponent(g, charPosition);
     }
 }
+
+
+
+
 
