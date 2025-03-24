@@ -21,7 +21,6 @@ public class GamePanel extends JPanel implements Runnable {
     int playerSpeed = 4;
 
     int FPS = 60;
-    long deltaTime = 1000000000 / FPS;  // -> 16.666.666,66666667
 
 
     Thread gameThread;
@@ -45,15 +44,11 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
 
-        /*
-        int counter = 0;
-        long lastCurrentTime = 0L;
-         */
+        double drawInterval = 1000000000 / FPS;  // -> 16.666.666,66666667 NANOSECONDI -> oppure -> 0.016666666666666666667 SECONDI
+        double nextDrawTime = System.nanoTime() + drawInterval;
 
         while (gameThread.isAlive()) {
 
-            long currentTime = System.nanoTime();
-            long nextTime = currentTime + deltaTime;
 
             // 1: UPDATE nuove informazioni
             update();
@@ -61,6 +56,23 @@ public class GamePanel extends JPanel implements Runnable {
             // 2: DRAW ridisegna lo screen
             repaint();
 
+            try {
+
+                double remainingTime = nextDrawTime - System.nanoTime();
+                remainingTime = remainingTime/1000000; // ->  //converto in millisSecond
+
+                if (remainingTime < 0) {
+                    remainingTime = 0;
+                }
+
+                Thread.sleep((long) remainingTime);
+
+                nextDrawTime += drawInterval;
+
+            } catch (InterruptedException e) {
+
+                throw new RuntimeException(e);
+            }
 
 
             /*
@@ -86,19 +98,19 @@ public class GamePanel extends JPanel implements Runnable {
     private void update() {
 
         if (kh.upPressed) {
-            playerX -= playerSpeed;
-        }
-
-        if (kh.downPressed) {
-            playerX += playerSpeed;
-        }
-
-        if (kh.leftPressed) {
             playerY -= playerSpeed;
         }
 
-        if (kh.rightPressed) {
+        if (kh.downPressed) {
             playerY += playerSpeed;
+        }
+
+        if (kh.leftPressed) {
+            playerX -= playerSpeed;
+        }
+
+        if (kh.rightPressed) {
+            playerX += playerSpeed;
         }
 
     }
