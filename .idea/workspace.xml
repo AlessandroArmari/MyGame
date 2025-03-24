@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="rincapsulo">
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="rincapsulo 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/constants/GameCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/GameCon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/PaintComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/PaintComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" afterDir="false" />
     </list>
@@ -126,7 +126,7 @@
       <workItem from="1742752717936" duration="32000" />
       <workItem from="1742752769677" duration="294000" />
       <workItem from="1742753077532" duration="6558000" />
-      <workItem from="1742803642499" duration="12262000" />
+      <workItem from="1742803642499" duration="12769000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -208,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742817056051</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="rincapsulo 2">
+      <option name="closed" value="true" />
+      <created>1742818116568</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742818116568</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +256,8 @@
     <MESSAGE value="COMMITTINO" />
     <MESSAGE value="staccato paintComponent" />
     <MESSAGE value="rincapsulo" />
-    <option name="LAST_COMMIT_MESSAGE" value="rincapsulo" />
+    <MESSAGE value="rincapsulo 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="rincapsulo 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

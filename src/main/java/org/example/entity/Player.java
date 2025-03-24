@@ -12,8 +12,14 @@ import java.awt.*;
 
 public class Player extends Entity {
 
-    public Player(Integer x, Integer y, Integer speed) {
-        super(x, y, speed);
+    public Player() {
+        setDeafultValues();
+    }
+
+    public void setDeafultValues() {
+        X = GameCon.defaultX;
+        Y = GameCon.defaultY;
+        speed = GameCon.playerSpeed;
     }
 
     @Override

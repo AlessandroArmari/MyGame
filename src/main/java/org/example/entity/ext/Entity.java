@@ -11,6 +11,9 @@ public abstract class Entity {
 
     public Integer speed;
 
+    public Entity() {
+    }
+
     public Entity(Integer x, Integer y, Integer speed) {
         X = x;
         Y = y;

@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable {
 
-    Player player = new Player(100, 100, 4);
+    Player player = new Player();
 
     Thread gameThread;
 
