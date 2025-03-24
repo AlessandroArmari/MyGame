@@ -41,7 +41,7 @@ public class GamePanel extends JPanel implements Runnable {
         while (gameThread.isAlive()) {
 
             // 1: UPDATE nuove informazioni
-            update.update(kh, player);
+            player.update(kh);
 
             // 2: DRAW ridisegna lo screen
             repaint();
@@ -52,8 +52,15 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void paintComponent(Graphics g) {
+
         super.paintComponent(g);
-        paintComponent.paintComponent(g, player);
+
+        Graphics2D g2 = (Graphics2D) g;
+
+        player.draw(g2);
+
+        g2.dispose();
+
     }
 }
 
