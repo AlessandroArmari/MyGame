@@ -1,14 +1,14 @@
 package org.example.core;
 
-import org.example.character.CharacterPosition;
 import org.example.constants.GraphicCon;
+import org.example.entity.Player;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class PaintComponent extends JComponent {
 
-    public void paintComponent(Graphics g, CharacterPosition charPosition) {
+    public void paintComponent(Graphics g, Player player) {
 
         super.paintComponent(g);
 
@@ -17,7 +17,7 @@ public class PaintComponent extends JComponent {
 
         g2.setColor(Color.RED);
 
-        g2.fillRect(charPosition.X, charPosition.Y, GraphicCon.tileSize, GraphicCon.tileSize);
+        g2.fillRect(player.X, player.Y, GraphicCon.tileSize, GraphicCon.tileSize);
 
         g2.dispose();
     }

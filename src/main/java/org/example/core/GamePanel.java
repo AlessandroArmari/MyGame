@@ -1,18 +1,16 @@
 package org.example.core;
 
-import org.example.character.CharacterPosition;
 import org.example.constants.GameCon;
 import org.example.constants.GraphicCon;
+import org.example.entity.Player;
 
 import javax.swing.*;
 import java.awt.*;
 
 
 public class GamePanel extends JPanel implements Runnable {
-    CharacterPosition charPosition = CharacterPosition.builder()
-            .X(200)
-            .Y(200)
-            .build();
+
+    Player player = new Player(100, 100, 4);
 
     Thread gameThread;
 
@@ -43,7 +41,7 @@ public class GamePanel extends JPanel implements Runnable {
         while (gameThread.isAlive()) {
 
             // 1: UPDATE nuove informazioni
-            update.update(kh, charPosition);
+            update.update(kh, player);
 
             // 2: DRAW ridisegna lo screen
             repaint();
@@ -55,7 +53,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        paintComponent.paintComponent(g, charPosition);
+        paintComponent.paintComponent(g, player);
     }
 }
 

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="COMMITTINO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/GraphicCon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/PaintComponent.java" afterDir="false" />
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="staccato paintComponent">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/constants/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/character/CharacterPosition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GameLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/PaintComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/PaintComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Update.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/a.armari/Desktop/MyGame",
+    "last_opened_file_path": "C:/Users/a.armari/Desktop/MyGame/src/entity",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,6 +80,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\a.armari\Desktop\MyGame\src\entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\a.armari\Desktop\MyGame\src\main\java\org\example" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -118,7 +129,7 @@
       <workItem from="1742752717936" duration="32000" />
       <workItem from="1742752769677" duration="294000" />
       <workItem from="1742753077532" duration="6558000" />
-      <workItem from="1742803642499" duration="7318000" />
+      <workItem from="1742803642499" duration="11251000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -184,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742810230116</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="staccato paintComponent">
+      <option name="closed" value="true" />
+      <created>1742811067846</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742811067846</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +241,8 @@
     <MESSAGE value="THREAD" />
     <MESSAGE value="update incapsulato" />
     <MESSAGE value="COMMITTINO" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMMITTINO" />
+    <MESSAGE value="staccato paintComponent" />
+    <option name="LAST_COMMIT_MESSAGE" value="staccato paintComponent" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

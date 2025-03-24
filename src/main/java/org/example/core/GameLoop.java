@@ -4,9 +4,8 @@ import org.example.constants.GameCon;
 
 public class GameLoop {
 
-
-
     public Double gameLoop(Double nextDrawTime) {
+
         try {
 
             double remainingTime = nextDrawTime - System.nanoTime();
@@ -21,7 +20,10 @@ public class GameLoop {
             return nextDrawTime + GameCon.drawInterval;
 
         } catch (InterruptedException e) {
+
+            System.out.println("Eccezione nel gameLoop");
             throw new RuntimeException(e);
+
         }
     }
 
