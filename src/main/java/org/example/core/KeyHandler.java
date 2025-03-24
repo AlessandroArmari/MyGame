@@ -34,33 +34,11 @@ public class KeyHandler implements KeyListener {
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {
-        mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {} ).accept(true);
-    }
+    public void keyPressed(KeyEvent e) {mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {} ).accept(true);}
 
     @Override
     public void keyReleased(KeyEvent e) {
-        mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {}).accept(false);
-    }
+        mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {}).accept(false);}
 
 
-    public void setUpPressed(boolean bool) {
-        System.out.println(KeyCon.UP + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
-        this.upPressed = bool;
-    }
-
-    public void setDownPressed(boolean bool) {
-        System.out.println(KeyCon.DOWN + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
-        this.downPressed = bool;
-    }
-
-    public void setLeftPressed(boolean bool) {
-        System.out.println(KeyCon.LEFT + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
-        this.leftPressed = bool;
-    }
-
-    public void setRightPressed(boolean bool) {
-        System.out.println(KeyCon.RIGHT + ((bool) ? KeyCon.PRESSED : KeyCon.RELEASED));
-        this.rightPressed = bool;
-    }
 }

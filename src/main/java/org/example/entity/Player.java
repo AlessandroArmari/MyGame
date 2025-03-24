@@ -27,35 +27,35 @@ public class Player extends Entity {
 
 
     public void update(KeyHandler kh) {
+
         if (kh.upPressed) {
             this.Y -= GameCon.playerSpeed;
-            this.direction = KeyCon.UP;
-            walkingAnimation();
-            System.out.println(KeyCon.UP + KeyCon.PRESSED);
+            extracted(KeyCon.UP);
         }
 
         if (kh.downPressed) {
             this.Y += GameCon.playerSpeed;
-            this.direction = KeyCon.DOWN;
-            walkingAnimation();
-            System.out.println(KeyCon.DOWN + KeyCon.PRESSED);
+            extracted(KeyCon.DOWN);
         }
 
         if (kh.leftPressed) {
             this.X -= GameCon.playerSpeed;
-            this.direction = KeyCon.LEFT;
-            walkingAnimation();
-            System.out.println(KeyCon.LEFT + KeyCon.PRESSED);
+            extracted(KeyCon.LEFT);
+
         }
 
         if (kh.rightPressed) {
             this.X += GameCon.playerSpeed;
-            this.direction = KeyCon.RIGHT;
-            walkingAnimation();
-            System.out.println(KeyCon.RIGHT + KeyCon.PRESSED);
+            extracted(KeyCon.RIGHT);
         }
 
 
+    }
+
+    private void extracted(String direction) {
+        this.direction = direction;
+        walkingAnimation();
+        System.out.println(direction + KeyCon.PRESSED);
     }
 
     private void walkingAnimation() {
