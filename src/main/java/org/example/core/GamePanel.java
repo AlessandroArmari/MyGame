@@ -1,7 +1,12 @@
 package org.example.core;
 
+import org.example.character.CharacterPosition;
+import org.example.constants.GameCon;
+import org.example.constants.Update;
+
 import javax.swing.*;
 import java.awt.*;
+
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -16,14 +21,16 @@ public class GamePanel extends JPanel implements Runnable {
     final int screenWidth = maxScreenColumn * tileSize; // 768 px
     final int screenHeight = maxScreenRow * tileSize; // 576 px
 
-    int playerX = 200;
-    int playerY = 200;
-    int playerSpeed = 4;
-
-    int FPS = 60;
-
+    CharacterPosition charPosition = CharacterPosition.builder()
+            .X(200)
+            .Y(200)
+            .build();
 
     Thread gameThread;
+
+    Update update = new Update();
+    GameLoop gameLoop = new GameLoop();
+
 
     KeyHandler kh = new KeyHandler();
 
@@ -44,76 +51,23 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
 
-        double drawInterval = 1000000000 / FPS;  // -> 16.666.666,66666667 NANOSECONDI -> oppure -> 0.016666666666666666667 SECONDI
-        double nextDrawTime = System.nanoTime() + drawInterval;
+        //prossimo TIME di aggiornamento
+        Double nextDrawTime = System.nanoTime() + GameCon.drawInterval;
 
         while (gameThread.isAlive()) {
 
-
             // 1: UPDATE nuove informazioni
-            update();
+            update.update(kh, charPosition);
 
             // 2: DRAW ridisegna lo screen
             repaint();
 
-            try {
-
-                double remainingTime = nextDrawTime - System.nanoTime();
-                remainingTime = remainingTime/1000000; // ->  //converto in millisSecond
-
-                if (remainingTime < 0) {
-                    remainingTime = 0;
-                }
-
-                Thread.sleep((long) remainingTime);
-
-                nextDrawTime += drawInterval;
-
-            } catch (InterruptedException e) {
-
-                throw new RuntimeException(e);
-            }
-
-
-            /*
-            long currentTime = System.currentTimeMillis();
-
-            //per il numero di giri compitui dal while a ogni secondo
-            if (currentTime - lastCurrentTime > 1000) {
-                System.out.println(counter);
-                lastCurrentTime = currentTime;
-                counter = 0;
-            }
-            counter++;
-
-             */
-
-
+            nextDrawTime = gameLoop.gameLoop(nextDrawTime);
 
         }
 
     }
 
-
-    private void update() {
-
-        if (kh.upPressed) {
-            playerY -= playerSpeed;
-        }
-
-        if (kh.downPressed) {
-            playerY += playerSpeed;
-        }
-
-        if (kh.leftPressed) {
-            playerX -= playerSpeed;
-        }
-
-        if (kh.rightPressed) {
-            playerX += playerSpeed;
-        }
-
-    }
 
     public void paintComponent(Graphics g) {
 
@@ -124,7 +78,7 @@ public class GamePanel extends JPanel implements Runnable {
 
         g2.setColor(Color.WHITE);
 
-        g2.fillRect(playerX, playerY, tileSize, tileSize);
+        g2.fillRect(charPosition.X, charPosition.Y, tileSize, tileSize);
 
         g2.dispose();
     }

@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="bonitasfot?">
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="THREAD">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/character/CharacterPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/GameCon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/constants/Update.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GameLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/constants/MapCon.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +120,7 @@
       <workItem from="1742752717936" duration="32000" />
       <workItem from="1742752769677" duration="294000" />
       <workItem from="1742753077532" duration="6558000" />
-      <workItem from="1742803642499" duration="1467000" />
+      <workItem from="1742803642499" duration="5448000" />
     </task>
     <task id="LOCAL-00001" summary="ciao">
       <option name="closed" value="true" />
@@ -157,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742803887744</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="THREAD">
+      <option name="closed" value="true" />
+      <created>1742805333565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742805333565</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +205,18 @@
     <MESSAGE value="KeyHandler" />
     <MESSAGE value="no" />
     <MESSAGE value="bonitasfot?" />
-    <option name="LAST_COMMIT_MESSAGE" value="bonitasfot?" />
+    <MESSAGE value="THREAD" />
+    <option name="LAST_COMMIT_MESSAGE" value="THREAD" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/constants/Update.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
