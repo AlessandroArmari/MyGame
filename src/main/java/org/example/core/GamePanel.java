@@ -47,7 +47,6 @@ public class GamePanel extends JPanel implements Runnable {
         gameThread.start();
     }
 
-
     @Override
     public void run() {
 
@@ -76,10 +75,11 @@ public class GamePanel extends JPanel implements Runnable {
         //creo nuova cosa
         Graphics2D g2 = (Graphics2D) g;
 
-        g2.setColor(Color.WHITE);
+        g2.setColor(Color.RED);
 
         g2.fillRect(charPosition.X, charPosition.Y, tileSize, tileSize);
 
         g2.dispose();
     }
 }
+
