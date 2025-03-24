@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="pupazzetto si muove bene">
+    <list default="true" id="56306521-c7f5-4ca4-a701-c295f23abe2c" name="Changes" comment="ternario">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Marras/down1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Marras/down2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Armandeiro\Desktop\MyGame\src\main\resources\Marras" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -148,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742759851909</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ternario">
+      <option name="closed" value="true" />
+      <created>1742840883292</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742840883292</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +186,18 @@
     <MESSAGE value="updat e redraw" />
     <MESSAGE value="KeyHandler" />
     <MESSAGE value="no" />
-    <option name="LAST_COMMIT_MESSAGE" value="no" />
+    <MESSAGE value="ternario" />
+    <option name="LAST_COMMIT_MESSAGE" value="ternario" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/entity/ext/Entity.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

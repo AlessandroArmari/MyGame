@@ -93,7 +93,7 @@ public class Player extends Entity {
 
             case KeyCon.RIGHT -> (spriteNum == 1) ? right1 : right2;
 
-            default -> (null);
+            default -> throw new RuntimeException();
         };
 
         g2.drawImage(image, X, Y, GraphicCon.tileSize, GraphicCon.tileSize, null);
