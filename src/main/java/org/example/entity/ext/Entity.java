@@ -39,7 +39,7 @@ public abstract class Entity {
     }
 
     private BufferedImage getPathUri(String imgName) {
-        String returnString = String.format("/%s/%s.png", this.getClass().getSimpleName(), imgName);
+        String returnString = String.format("/%s/%s.png", "Marras", imgName);
 
         try {
             return ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream(returnString)));
