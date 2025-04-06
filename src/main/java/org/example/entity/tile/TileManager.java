@@ -12,7 +12,9 @@ public class TileManager {
         this.gp = gp;
         tile = new Tile[10];
         for (int i = 0; i <= tile.length; i++) {
-            this.tile[i].image = ImageUtil.getPathUri("Tile", "rose_field.png");
+
+
+            this.tile[i].image = ImageUtil.getPathUri("Tile", "rose_field");
         }
     }
 

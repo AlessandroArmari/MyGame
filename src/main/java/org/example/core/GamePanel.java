@@ -3,6 +3,7 @@ package org.example.core;
 import org.example.constants.GameCon;
 import org.example.constants.GraphicCon;
 import org.example.entity.Player;
+import org.example.entity.tile.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class GamePanel extends JPanel implements Runnable {
     Thread gameThread;
     GameLoop gameLoop = new GameLoop();
     KeyHandler kh = new KeyHandler();
+    TileManager tileM = new TileManager(this);
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(GraphicCon.screenWidth, GraphicCon.screenHeight));
@@ -52,6 +54,8 @@ public class GamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
 
         Graphics2D g2 = (Graphics2D) g;
+
+        tileM.drawImage(g2);
 
         player.draw(g2);
 
