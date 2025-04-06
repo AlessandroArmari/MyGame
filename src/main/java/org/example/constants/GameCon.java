@@ -10,8 +10,6 @@ public class GameCon {
 
     public static  Integer defaultY = 100;
 
-
     public static Integer playerSpeed = 4;
-
 
 }

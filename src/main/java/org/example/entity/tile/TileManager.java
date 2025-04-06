@@ -1,12 +1,8 @@
 package org.example.entity.tile;
-
+import org.example.constants.GraphicCon;
 import org.example.core.GamePanel;
 import org.example.util.ImageUtil;
-
-import javax.imageio.IIOImage;
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.util.Objects;
+import java.awt.*;
 
 public class TileManager {
     GamePanel gp;
@@ -18,6 +14,10 @@ public class TileManager {
         for (int i = 0; i <= tile.length; i++) {
             this.tile[i].image = ImageUtil.getPathUri("Tile", "rose_field.png");
         }
+    }
+
+    public void drawImage(Graphics2D g2) {
+        g2.drawImage(tile[0].image, 0, 0, GraphicCon.tileSize,  GraphicCon.tileSize, null);
     }
 
 
