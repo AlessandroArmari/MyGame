@@ -11,9 +11,8 @@ public class TileManager {
     public TileManager(GamePanel gp) {
         this.gp = gp;
         tile = new Tile[10];
-        for (int i = 0; i <= tile.length; i++) {
-
-
+        for (int i = 0; i <= tile.length-1; i++) {
+            this.tile[i] = new Tile();
             this.tile[i].image = ImageUtil.getPathUri("Tile", "rose_field");
         }
     }
