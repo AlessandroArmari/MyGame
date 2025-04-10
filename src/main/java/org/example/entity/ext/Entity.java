@@ -1,16 +1,8 @@
 package org.example.entity.ext;
 
-import org.example.constants.GameCon;
-import org.example.constants.GraphicCon;
-import org.example.constants.KeyCon;
-import org.example.core.KeyHandler;
 import org.example.util.ImageUtil;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Objects;
 
 public abstract class Entity {
 
@@ -29,13 +21,13 @@ public abstract class Entity {
     }
 
     public void getImage() {
-        up1 = ImageUtil.getPathUri("Characters/Man", "up1");
-        up2 = ImageUtil.getPathUri("Characters/Man", "up2");
-        down1 = ImageUtil.getPathUri("Characters/Man", "down1");
-        down2 = ImageUtil.getPathUri("Characters/Man", "down2");
-        left1 = ImageUtil.getPathUri("Characters/Man", "left1");
-        left2 = ImageUtil.getPathUri("Characters/Man", "left2");
-        right1 = ImageUtil.getPathUri("Characters/Man", "right1");
-        right2 = ImageUtil.getPathUri("Characters/Man", "right2");
+        up1 = ImageUtil.getPathUri("Character/Man", "up1");
+        up2 = ImageUtil.getPathUri("Character/Man", "up2");
+        down1 = ImageUtil.getPathUri("Character/Man", "down1");
+        down2 = ImageUtil.getPathUri("Character/Man", "down2");
+        left1 = ImageUtil.getPathUri("Character/Man", "left1");
+        left2 = ImageUtil.getPathUri("Character/Man", "left2");
+        right1 = ImageUtil.getPathUri("Character/Man", "right1");
+        right2 = ImageUtil.getPathUri("Character/Man", "right2");
     }
 }
