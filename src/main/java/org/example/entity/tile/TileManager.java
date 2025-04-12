@@ -65,10 +65,21 @@ public class TileManager {
 
             int worldX = worldCol * Kgra.tileSize;
             int worldY = worldRow * Kgra.tileSize;
+
+            // screenX e screenY sono le coordinate che passo
+            //nel drawImage() per ogni tile
             int screenX = worldX - gp.player.worldX + gp.player.screenX;
             int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
-            g2.drawImage(TileCon.mapIntTile.get(tileNum).image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
+            if (   // questo if avvia il metodo SOLAMENTE per i tile "vicini" al char.
+                    worldX > gp.player.worldX - gp.player.screenX &&
+                    worldX < gp.player.worldX + gp.player.screenX &&
+                    worldY > gp.player.worldY - gp.player.screenY &&
+                    worldY < gp.player.worldY + gp.player.screenY
+            ) {
+                g2.drawImage(TileCon.mapIntTile.get(tileNum).image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
+            }
+
             worldCol++;
 
             if (worldCol == Kgra.maxWorldCol) {
