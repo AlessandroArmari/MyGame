@@ -20,10 +20,16 @@ public class TileCon {
         return new Tile(ImageUtil.getPathUri("Tile", "wall"), false);
     }
 
+    public static Tile sand3() {
+        return new Tile(ImageUtil.getPathUri("Tile", "sand"), false);
+    }
+
+
     public static Map<Integer, Tile> mapIntTile = Map.of(
             0, roseField0(),
             1, water1(),
-            2, wall2()
+            2, wall2(),
+            3, sand3()
     );
 
 
