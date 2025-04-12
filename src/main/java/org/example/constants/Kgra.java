@@ -1,6 +1,6 @@
 package org.example.constants;
 
-public class GraphicCon {
+public class Kgra {
 
     //SCREEN SETTINGS
     public final static int originalTileSize = 16; // 16x16 px

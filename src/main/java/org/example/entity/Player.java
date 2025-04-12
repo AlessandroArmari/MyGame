@@ -2,7 +2,7 @@ package org.example.entity;
 
 
 import org.example.constants.GameCon;
-import org.example.constants.GraphicCon;
+import org.example.constants.Kgra;
 import org.example.constants.KeyCon;
 import org.example.core.KeyHandler;
 import org.example.entity.ext.Entity;
@@ -13,13 +13,22 @@ import java.awt.image.BufferedImage;
 
 public class Player extends Entity {
 
+    // sono FINAL -> piazzano il character al centro della view
+    public final int screenX;
+    public final int screenY;
+
     public Player() {
+
+        this.screenX = Kgra.screenWidth / 2 - Kgra.tileSize / 2;  // -> questa parte final per centrarlo 100%
+        this.screenY = Kgra.screenHeight / 2 - Kgra.tileSize / 2;
+
+
         setDeafultValues();
     }
 
     public void setDeafultValues() {
-        worldX = GameCon.defaultX;
-        worldY = GameCon.defaultY;
+        worldX = Kgra.tileSize * 23;
+        worldY = Kgra.tileSize * 21;
         speed = GameCon.playerSpeed;
         direction = KeyCon.DOWN;
         getImage();
@@ -96,7 +105,7 @@ public class Player extends Entity {
             default -> throw new RuntimeException();
         };
 
-        g2.drawImage(image, worldX, worldY, GraphicCon.tileSize, GraphicCon.tileSize, null);
+        g2.drawImage(image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
     }
 
 }

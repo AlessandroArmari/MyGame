@@ -1,7 +1,7 @@
 package org.example.core;
 
 import org.example.constants.GameCon;
-import org.example.constants.GraphicCon;
+import org.example.constants.Kgra;
 import org.example.entity.Player;
 import org.example.entity.tile.TileManager;
 
@@ -18,7 +18,7 @@ public class GamePanel extends JPanel implements Runnable {
     TileManager tileM = new TileManager(this);
 
     public GamePanel() {
-        this.setPreferredSize(new Dimension(GraphicCon.screenWidth, GraphicCon.screenHeight));
+        this.setPreferredSize(new Dimension(Kgra.screenWidth, Kgra.screenHeight));
         this.setBackground(Color.CYAN);
         this.setDoubleBuffered(true);
         this.addKeyListener(kh);

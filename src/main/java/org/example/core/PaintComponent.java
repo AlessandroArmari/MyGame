@@ -1,6 +1,5 @@
 package org.example.core;
 
-import org.example.constants.GraphicCon;
 import org.example.entity.Player;
 
 import javax.swing.*;

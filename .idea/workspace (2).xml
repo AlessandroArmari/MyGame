@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e73b310e-3a0e-4394-85ba-44bc5fba19df" name="Changes" comment="tileManager">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/tile/TileManager.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlessandroArmari&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlessandroArmari/MyGame.git&quot;,
+    &quot;accountId&quot;: &quot;fa3848cc-caa3-4143-8e93-e8d7886fb73b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2upD1nXQRnAB8mjEZMjiYqOKRE8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Debug",
+    "Maven.MyGame [clean].executor": "Run",
+    "Maven.MyGame [install].executor": "Run",
+    "Maven.MyGane [clean].executor": "Run",
+    "Maven.MyGane [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Armandeiro/Desktop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Armandeiro\Desktop\MyGane\src\main\resources\Tile" />
+      <recent name="C:\Users\Armandeiro\Desktop\MyGane\src\main\resources\Characters" />
+      <recent name="C:\Users\Armandeiro\Desktop\MyGane\src\main\resources\Man" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Tile" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e73b310e-3a0e-4394-85ba-44bc5fba19df" name="Changes" comment="" />
+      <created>1742936411712</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742936411712</updated>
+      <workItem from="1742936412690" duration="170000" />
+      <workItem from="1742936604047" duration="91000" />
+      <workItem from="1742936706480" duration="531000" />
+      <workItem from="1743871996770" duration="3583000" />
+      <workItem from="1743930841246" duration="1324000" />
+    </task>
+    <task id="LOCAL-00001" summary="senor">
+      <option name="closed" value="true" />
+      <created>1742936735535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742936735535</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tile">
+      <option name="closed" value="true" />
+      <created>1743875598275</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743875598275</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tileManager">
+      <option name="closed" value="true" />
+      <created>1743931472005</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743931472005</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tileManager">
+      <option name="closed" value="true" />
+      <created>1743932057068</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743932057068</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="senor" />
+    <MESSAGE value="tile" />
+    <MESSAGE value="tileManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="tileManager" />
+  </component>
+</project>

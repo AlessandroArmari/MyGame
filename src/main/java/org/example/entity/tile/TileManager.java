@@ -1,6 +1,6 @@
 package org.example.entity.tile;
 
-import org.example.constants.GraphicCon;
+import org.example.constants.Kgra;
 import org.example.constants.TileCon;
 import org.example.core.GamePanel;
 import org.example.util.exception.ExMsg;
@@ -16,7 +16,7 @@ public class TileManager {
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
-        mapTileNum = new int[GraphicCon.maxScreenColumn][GraphicCon.maxScreenRow];
+        mapTileNum = new int[Kgra.maxScreenColumn][Kgra.maxScreenRow];
         loadMap();
     }
 
@@ -31,17 +31,17 @@ public class TileManager {
             int rowCounter = 0;
             int colCounter = 0;
 
-            while (rowCounter < GraphicCon.maxScreenRow && colCounter < GraphicCon.maxScreenColumn) {
+            while (rowCounter < Kgra.maxScreenRow && colCounter < Kgra.maxScreenColumn) {
 
                 String line = br.readLine();
 
-                while (colCounter < GraphicCon.maxScreenColumn) {
+                while (colCounter < Kgra.maxScreenColumn) {
                     String[] numbers = line.split(" ");
                     mapTileNum[colCounter][rowCounter] = Integer.parseInt(numbers[colCounter]);
                     colCounter++;
                 }
 
-                if (colCounter == GraphicCon.maxScreenColumn) {
+                if (colCounter == Kgra.maxScreenColumn) {
                     colCounter = 0;
                     rowCounter++;
                 }
@@ -60,20 +60,20 @@ public class TileManager {
         int x = 0;
         int y = 0;
 
-        while (colCounter < GraphicCon.maxScreenColumn && rowCounter < GraphicCon.maxScreenRow) {
+        while (colCounter < Kgra.maxScreenColumn && rowCounter < Kgra.maxScreenRow) {
 
             int tileNum = mapTileNum[colCounter][rowCounter];
 
-            g2.drawImage(TileCon.mapIntTile.get(tileNum).image, x, y, GraphicCon.tileSize, GraphicCon.tileSize, null);
+            g2.drawImage(TileCon.mapIntTile.get(tileNum).image, x, y, Kgra.tileSize, Kgra.tileSize, null);
             colCounter++;
-            x += GraphicCon.tileSize;
+            x += Kgra.tileSize;
 
-            if (colCounter == GraphicCon.maxScreenColumn) {
+            if (colCounter == Kgra.maxScreenColumn) {
 
                 colCounter = 0;
                 x = 0;
                 rowCounter++;
-                y += GraphicCon.tileSize;
+                y += Kgra.tileSize;
             }
         }
     }
