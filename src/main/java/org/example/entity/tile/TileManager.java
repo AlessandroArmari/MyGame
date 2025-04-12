@@ -31,17 +31,17 @@ public class TileManager {
             int rowCounter = 0;
             int colCounter = 0;
 
-            while (rowCounter < Kgra.maxScreenRow && colCounter < Kgra.maxScreenColumn) {
+            while (rowCounter < Kgra.maxWorldRow && colCounter < Kgra.maxWorldCol) {
 
                 String line = br.readLine();
 
-                while (colCounter < Kgra.maxScreenColumn) {
+                while (colCounter < Kgra.maxWorldCol) {
                     String[] numbers = line.split(" ");
                     mapTileNum[colCounter][rowCounter] = Integer.parseInt(numbers[colCounter]);
                     colCounter++;
                 }
 
-                if (colCounter == Kgra.maxScreenColumn) {
+                if (colCounter == Kgra.maxWorldCol) {
                     colCounter = 0;
                     rowCounter++;
                 }
@@ -71,11 +71,13 @@ public class TileManager {
             int screenX = worldX - gp.player.worldX + gp.player.screenX;
             int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
-            if (   // questo if avvia il metodo SOLAMENTE per i tile "vicini" al char.
-                    worldX > gp.player.worldX - gp.player.screenX &&
-                    worldX < gp.player.worldX + gp.player.screenX &&
-                    worldY > gp.player.worldY - gp.player.screenY &&
-                    worldY < gp.player.worldY + gp.player.screenY
+
+            if // -> questo if avvia il metodo SOLAMENTE per i tile "vicini" al char.
+            (
+                    (worldX + Kgra.tileSize) > gp.player.worldX - gp.player.screenX &&
+                            (worldX - Kgra.tileSize) < gp.player.worldX + gp.player.screenX &&
+                            (worldY + Kgra.tileSize) > gp.player.worldY - gp.player.screenY &&
+                            (worldY - Kgra.tileSize) < gp.player.worldY + gp.player.screenY
             ) {
                 g2.drawImage(TileCon.mapIntTile.get(tileNum).image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
             }
