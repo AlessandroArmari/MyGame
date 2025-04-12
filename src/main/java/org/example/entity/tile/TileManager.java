@@ -20,6 +20,7 @@ public class TileManager {
         loadMap();
     }
 
+
     //questo valorizza -> int[][] mapTileNum -> a partire dal file .txt
     public void loadMap() {
         try {
