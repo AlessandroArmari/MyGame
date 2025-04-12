@@ -18,8 +18,8 @@ public class Player extends Entity {
     }
 
     public void setDeafultValues() {
-        X = GameCon.defaultX;
-        Y = GameCon.defaultY;
+        worldX = GameCon.defaultX;
+        worldY = GameCon.defaultY;
         speed = GameCon.playerSpeed;
         direction = KeyCon.DOWN;
         getImage();
@@ -29,23 +29,23 @@ public class Player extends Entity {
     public void update(KeyHandler kh) {
 
         if (kh.upPressed) {
-            this.Y -= GameCon.playerSpeed;
+            this.worldY -= GameCon.playerSpeed;
             extracted(KeyCon.UP);
         }
 
         if (kh.downPressed) {
-            this.Y += GameCon.playerSpeed;
+            this.worldY += GameCon.playerSpeed;
             extracted(KeyCon.DOWN);
         }
 
         if (kh.leftPressed) {
-            this.X -= GameCon.playerSpeed;
+            this.worldX -= GameCon.playerSpeed;
             extracted(KeyCon.LEFT);
 
         }
 
         if (kh.rightPressed) {
-            this.X += GameCon.playerSpeed;
+            this.worldX += GameCon.playerSpeed;
             extracted(KeyCon.RIGHT);
         }
 
@@ -55,7 +55,7 @@ public class Player extends Entity {
     private void extracted(String direction) {
         this.direction = direction;
         walkingAnimation();
-        System.out.println(direction + KeyCon.PRESSED);
+        System.out.println("X=" + worldX + ", Y = " + worldY);
     }
 
     private void walkingAnimation() {
@@ -96,7 +96,7 @@ public class Player extends Entity {
             default -> throw new RuntimeException();
         };
 
-        g2.drawImage(image, X, Y, GraphicCon.tileSize, GraphicCon.tileSize, null);
+        g2.drawImage(image, worldX, worldY, GraphicCon.tileSize, GraphicCon.tileSize, null);
     }
 
 }

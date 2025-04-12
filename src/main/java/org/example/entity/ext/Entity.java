@@ -6,8 +6,8 @@ import java.awt.image.BufferedImage;
 
 public abstract class Entity {
 
-    public Integer X;
-    public Integer Y;
+    public Integer worldX;
+    public Integer worldY;
 
     public Integer speed;
 
