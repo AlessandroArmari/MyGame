@@ -3,6 +3,7 @@ package org.example.entity.tile;
 import org.example.constants.GraphicCon;
 import org.example.constants.TileCon;
 import org.example.core.GamePanel;
+import org.example.util.exception.ExMsg;
 
 import java.awt.*;
 import java.io.BufferedReader;
@@ -11,7 +12,6 @@ import java.io.InputStreamReader;
 
 public class TileManager {
     GamePanel gp;
-    Tile[] tile;
     int[][] mapTileNum;
 
     public TileManager(GamePanel gp) {
@@ -20,6 +20,7 @@ public class TileManager {
         loadMap();
     }
 
+    //questo valorizza -> int[][] mapTileNum -> a partire dal file .txt
     public void loadMap() {
         try {
 
@@ -47,7 +48,7 @@ public class TileManager {
             br.close();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(ExMsg.loadMap());
         }
     }
 
