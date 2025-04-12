@@ -16,7 +16,7 @@ public class TileManager {
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
-        mapTileNum = new int[Kgra.maxScreenColumn][Kgra.maxScreenRow];
+        mapTileNum = new int[Kgra.maxWorldCol][Kgra.maxWorldRow];
         loadMap();
     }
 
@@ -25,7 +25,7 @@ public class TileManager {
     public void loadMap() {
         try {
 
-            InputStream is = getClass().getResourceAsStream("/Map/map01.txt");
+            InputStream is = getClass().getResourceAsStream("/Map/world01.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             int rowCounter = 0;
@@ -55,25 +55,27 @@ public class TileManager {
 
     public void drawImage(Graphics g2) {
 
-        int colCounter = 0;
-        int rowCounter = 0;
-        int x = 0;
-        int y = 0;
+        int worldCol = 0;
+        int worldRow = 0;
 
-        while (colCounter < Kgra.maxScreenColumn && rowCounter < Kgra.maxScreenRow) {
 
-            int tileNum = mapTileNum[colCounter][rowCounter];
+        while (worldCol < Kgra.maxWorldCol && worldRow < Kgra.maxWorldRow) {
 
-            g2.drawImage(TileCon.mapIntTile.get(tileNum).image, x, y, Kgra.tileSize, Kgra.tileSize, null);
-            colCounter++;
-            x += Kgra.tileSize;
+            int tileNum = mapTileNum[worldCol][worldRow];
 
-            if (colCounter == Kgra.maxScreenColumn) {
+            int worldX = worldCol * Kgra.tileSize;
+            int worldY = worldRow * Kgra.tileSize;
+            int screenX = worldX - gp.player.worldX + gp.player.screenX;
+            int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
-                colCounter = 0;
-                x = 0;
-                rowCounter++;
-                y += Kgra.tileSize;
+            g2.drawImage(TileCon.mapIntTile.get(tileNum).image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
+            worldCol++;
+
+            if (worldCol == Kgra.maxWorldCol) {
+
+                worldCol = 0;
+
+                worldRow++;
             }
         }
     }

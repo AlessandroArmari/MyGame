@@ -12,4 +12,9 @@ public class Kgra {
 
     public final static int screenWidth = maxScreenColumn * tileSize; // 768 px
     public final static int screenHeight = maxScreenRow * tileSize; // 576 px
+
+    public final static int maxWorldCol = 50;
+    public final static int maxWorldRow = 50;
+    public final static int worldWidth = maxWorldCol * tileSize;
+    public final static int worldHeight = maxWorldRow * tileSize;
 }
