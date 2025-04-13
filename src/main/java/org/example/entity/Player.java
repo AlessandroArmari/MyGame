@@ -19,7 +19,7 @@ public class Player extends Entity {
 
     public Player() {
 
-        this.screenX = Kgra.screenWidth / 2 - Kgra.tileSize / 2;  // -> questa parte final per centrarlo 100%
+        this.screenX = Kgra.screenWidth / 2 - Kgra.tileSize / 2;  // ->  - Kgra.tileSize / 2 -> questa parte finale per centrarlo 100%
         this.screenY = Kgra.screenHeight / 2 - Kgra.tileSize / 2;
 
 
@@ -64,7 +64,7 @@ public class Player extends Entity {
     private void extracted(String direction) {
         this.direction = direction;
         walkingAnimation();
-        System.out.println("X=" + worldX + ", Y = " + worldY);
+        System.out.println("worldX=" + worldX + ", worldY = " + worldY);
     }
 
     private void walkingAnimation() {

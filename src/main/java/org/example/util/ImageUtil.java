@@ -15,8 +15,7 @@ public class ImageUtil {
             return ImageIO.read(Objects.requireNonNull(ImageUtil.class.getResourceAsStream(returnString)));
         } catch (IOException e) {
 
-            e.printStackTrace();
-            throw new RuntimeException();
+            throw new RuntimeException(e.getMessage());
         }
     }
 }

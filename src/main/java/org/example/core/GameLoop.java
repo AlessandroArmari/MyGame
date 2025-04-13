@@ -20,10 +20,7 @@ public class GameLoop {
             return nextDrawTime + GameCon.drawInterval;
 
         } catch (InterruptedException e) {
-
-            System.out.println("Eccezione nel gameLoop");
-            throw new RuntimeException(e);
-
+            throw new RuntimeException("Eccezione nel gameLoop: " + e.getMessage());
         }
     }
 
