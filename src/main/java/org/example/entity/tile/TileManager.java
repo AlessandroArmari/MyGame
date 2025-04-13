@@ -49,7 +49,7 @@ public class TileManager {
             br.close();
 
         } catch (Exception e) {
-            throw new RuntimeException(ExMsg.loadMap());
+            throw new RuntimeException(ExMsg.loadMap(e.getMessage()));
         }
     }
 
