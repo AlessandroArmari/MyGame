@@ -22,8 +22,17 @@ public class Player extends Entity {
         this.screenX = Kgra.screenWidth / 2 - Kgra.tileSize / 2;  // ->  - Kgra.tileSize / 2 -> questa parte finale per centrarlo 100%
         this.screenY = Kgra.screenHeight / 2 - Kgra.tileSize / 2;
 
+        solidArea = new Rectangle(
+                screenX + 12,
+                screenY + 13,
+                Kgra.tileSize - (Kgra.tileSize / 2),
+                Kgra.tileSize - (Kgra.tileSize / 3)
+        );
 
         setDeafultValues();
+
+        getImage();
+
     }
 
     public void setDeafultValues() {
@@ -31,7 +40,6 @@ public class Player extends Entity {
         worldY = Kgra.tileSize * 21;
         speed = GameCon.playerSpeed;
         direction = KeyCon.DOWN;
-        getImage();
     }
 
 
@@ -106,6 +114,7 @@ public class Player extends Entity {
         };
 
         g2.drawImage(image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
+        g2.draw(this.solidArea);
     }
 
 }

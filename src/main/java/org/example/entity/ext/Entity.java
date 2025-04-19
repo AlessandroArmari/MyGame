@@ -2,6 +2,7 @@ package org.example.entity.ext;
 
 import org.example.util.ImageUtil;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public abstract class Entity {
@@ -16,6 +17,9 @@ public abstract class Entity {
 
     public Integer spriteCounter = 0;
     public Integer spriteNum = 1;
+
+    public Rectangle solidArea; //serve per le collision
+    public Boolean collisionOn = false;
 
     public Entity() {
     }

@@ -13,11 +13,11 @@ public class Ktile {
     }
 
     public static Tile water1() {
-        return new Tile(ImageUtil.getPathUri("Tile", "water1"), false);
+        return new Tile(ImageUtil.getPathUri("Tile", "water1"), true);
     }
 
     public static Tile wall2() {
-        return new Tile(ImageUtil.getPathUri("Tile", "wall2"), false);
+        return new Tile(ImageUtil.getPathUri("Tile", "wall2"), true);
     }
 
     public static Tile sand3() {
