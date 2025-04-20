@@ -16,16 +16,11 @@ public class Ktile {
         return new Tile(ImageUtil.getPathUri("Tile", "water1"), true);
     }
 
-    public static Tile wall2() {
-        return new Tile(ImageUtil.getPathUri("Tile", "wall2"), true);
-    }
+    public static Tile wall2() {return new Tile(ImageUtil.getPathUri("Tile", "wall2"), true);}
 
-    public static Tile sand3() {
-        return new Tile(ImageUtil.getPathUri("Tile", "sand3"), false);
-    }
-    public static Tile stone4() {
-        return new Tile(ImageUtil.getPathUri("Tile", "stone4"), false);
-    }
+    public static Tile sand3() {return new Tile(ImageUtil.getPathUri("Tile", "sand3"), false);}
+
+    public static Tile stone4() {return new Tile(ImageUtil.getPathUri("Tile", "stone4"), false);}
 
 
     public static Map<Integer, Tile> mapIntTile = Map.of(
