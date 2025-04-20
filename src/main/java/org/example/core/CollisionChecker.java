@@ -19,7 +19,7 @@ public class CollisionChecker {
         int entityLeftWorldX = entity.worldX + entity.solidArea.x; //sarebbe la X del Char + il pezzettino di differenza dal quadrato interno
         int entityRightWorldX = entity.worldX + entity.solidArea.x + entity.solidArea.width;
         int entityTopWorldY = entity.worldY + entity.solidArea.y;
-        int entityBottomWorldY = entity.worldY + entity.solidArea.height;
+        int entityBottomWorldY = entity.worldY + entity.solidArea.y + entity.solidArea.height;
 
         int entityLeftCol = entityLeftWorldX / Kgra.tileSize;
         int entityRightCol = entityRightWorldX / Kgra.tileSize;

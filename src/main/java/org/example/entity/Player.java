@@ -18,6 +18,9 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
 
+    public int rectangleWidth;
+    public int rectangleHeight;
+
     public GamePanel gp;
 
     public Player(GamePanel gp) {
@@ -53,14 +56,13 @@ public class Player extends Entity {
 
          */
 
-        int width = Kgra.tileSize - (Kgra.tileSize / 2);
-        int height = Kgra.tileSize - (Kgra.tileSize / 3);
+        this.rectangleWidth = Kgra.tileSize - (Kgra.tileSize / 2);
+        this.rectangleHeight = Kgra.tileSize - (Kgra.tileSize / 3);
 
         return new Rectangle( // il rettangolo comodo per la visualizzazione
-                screenX + (width/2),
-                screenY + (height/2),
-                width,
-                height
+                8,16,
+                rectangleWidth,
+                rectangleHeight
         );
     }
 
@@ -75,8 +77,8 @@ public class Player extends Entity {
     public void update(KeyHandler kh) {
 
         if (kh.upPressed) {
-            this.worldY -= GameCon.playerSpeed;
-            direction = Kkey.UP;
+
+            extracted(Kkey.UP);
         }
 
         if (kh.downPressed) {
@@ -95,9 +97,7 @@ public class Player extends Entity {
             extracted(Kkey.RIGHT);
         }
 
-        //controllare Collision del quadrato interno
-        collisionOn = false;
-        gp.cChecker.checkTile(this);
+
 
         /*
         //SE collisionOn è true dopo checkTile(this) -> il char può moversi
@@ -119,7 +119,26 @@ public class Player extends Entity {
     }
 
     private void extracted(String direction) {
+
         this.direction = direction;
+
+        //controllare Collision del quadrato interno
+        collisionOn = false;
+        gp.cChecker.checkTile(this); // --> questo può cambiare collisionOn a true
+
+        //SE collisionOn è true dopo checkTile(this) -> il char può moversi
+        if (!collisionOn) {
+            switch (direction) {
+                case Kkey.UP -> {
+                    this.worldY -= GameCon.playerSpeed;
+                    //this.worldY -= GameCon.playerSpeed;
+                    //walkingAnimation();
+                    System.out.println("worldX=" + worldX + ", worldY = " + worldY);
+
+                }
+            }
+        }
+
         walkingAnimation();
         System.out.println("worldX=" + worldX + ", worldY = " + worldY);
     }
@@ -163,7 +182,7 @@ public class Player extends Entity {
         };
 
         g2.drawImage(image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
-        g2.draw(this.solidArea);
+        g2.drawRect(screenX + (rectangleWidth/2), screenY + (rectangleHeight/2), rectangleWidth, rectangleHeight);
     }
 
 }
