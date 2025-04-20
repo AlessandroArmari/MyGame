@@ -72,7 +72,9 @@ public class Player extends Entity {
             extracted(KeyCon.RIGHT);
         }
 
+        //controllare Collision del quadrato interno
         collisionOn = false;
+        gp.cChecker.checkTile(this);
 
 
 
