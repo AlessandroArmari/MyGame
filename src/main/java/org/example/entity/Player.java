@@ -12,7 +12,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
-
 public class Player extends Entity {
 
     // sono FINAL -> piazzano il character al centro della view
@@ -28,17 +27,41 @@ public class Player extends Entity {
         this.screenX = Kgra.screenWidth / 2 - Kgra.tileSize / 2;  // ->  - Kgra.tileSize / 2 -> questa parte finale per centrarlo 100%
         this.screenY = Kgra.screenHeight / 2 - Kgra.tileSize / 2;
 
-        solidArea = new Rectangle( // il rettangolo comodo per la visualizzazione
-                screenX + 12,
-                screenY + 13,
-                Kgra.tileSize - (Kgra.tileSize / 2),
-                Kgra.tileSize - (Kgra.tileSize / 3)
-        );
+        solidArea = rectangleCreator();
 
         setDeafultValues();
 
         getImage();
 
+    }
+
+    private Rectangle rectangleCreator() {
+
+        /*
+                         48
+
+                |------------------|
+                |                  |
+                |                  |
+           48   |     |------|     |    48
+                |     |      |32   |
+                |     |      |     |
+                |-----|------|-----|
+                         24
+
+                        48
+
+         */
+
+        int width = Kgra.tileSize - (Kgra.tileSize / 2);
+        int height = Kgra.tileSize - (Kgra.tileSize / 3);
+
+        return new Rectangle( // il rettangolo comodo per la visualizzazione
+                screenX + (width/2),
+                screenY + (height/2),
+                width,
+                height
+        );
     }
 
     public void setDeafultValues() {
@@ -75,7 +98,6 @@ public class Player extends Entity {
         //controllare Collision del quadrato interno
         collisionOn = false;
         gp.cChecker.checkTile(this);
-
 
 
     }
