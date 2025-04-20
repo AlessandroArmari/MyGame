@@ -3,7 +3,6 @@ package org.example.core;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.constants.KeyCon;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -34,7 +33,9 @@ public class KeyHandler implements KeyListener {
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {} ).accept(true);}
+    public void keyPressed(KeyEvent e) {
+        mapKeyAction.getOrDefault(e.getKeyCode(), (no) -> {} ).accept(true);
+    }
 
     @Override
     public void keyReleased(KeyEvent e) {

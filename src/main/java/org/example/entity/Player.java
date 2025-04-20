@@ -3,7 +3,7 @@ package org.example.entity;
 
 import org.example.constants.GameCon;
 import org.example.constants.Kgra;
-import org.example.constants.KeyCon;
+import org.example.constants.Kkey;
 import org.example.core.GamePanel;
 import org.example.core.KeyHandler;
 import org.example.entity.ext.Entity;
@@ -68,7 +68,7 @@ public class Player extends Entity {
         worldX = Kgra.tileSize * 23;
         worldY = Kgra.tileSize * 21;
         speed = GameCon.playerSpeed;
-        direction = KeyCon.DOWN;
+        direction = Kkey.DOWN;
     }
 
 
@@ -76,28 +76,44 @@ public class Player extends Entity {
 
         if (kh.upPressed) {
             this.worldY -= GameCon.playerSpeed;
-            extracted(KeyCon.UP);
+            direction = Kkey.UP;
         }
 
         if (kh.downPressed) {
             this.worldY += GameCon.playerSpeed;
-            extracted(KeyCon.DOWN);
+            extracted(Kkey.DOWN);
         }
 
         if (kh.leftPressed) {
             this.worldX -= GameCon.playerSpeed;
-            extracted(KeyCon.LEFT);
+            extracted(Kkey.LEFT);
 
         }
 
         if (kh.rightPressed) {
             this.worldX += GameCon.playerSpeed;
-            extracted(KeyCon.RIGHT);
+            extracted(Kkey.RIGHT);
         }
 
         //controllare Collision del quadrato interno
         collisionOn = false;
         gp.cChecker.checkTile(this);
+
+        /*
+        //SE collisionOn è true dopo checkTile(this) -> il char può moversi
+        if (collisionOn == false) {
+            switch (direction) {
+                case Kkey.UP -> {
+                    this.worldY -= GameCon.playerSpeed;
+                    walkingAnimation();
+                    System.out.println("worldX=" + worldX + ", worldY = " + worldY);
+
+                }
+            }
+        }
+
+         */
+
 
 
     }
@@ -135,13 +151,13 @@ public class Player extends Entity {
 
         BufferedImage image = switch (direction) {
 
-            case KeyCon.UP -> (spriteNum == 1) ? up1 : up2;
+            case Kkey.UP -> (spriteNum == 1) ? up1 : up2;
 
-            case KeyCon.DOWN -> (spriteNum == 1) ? down1 : down2;
+            case Kkey.DOWN -> (spriteNum == 1) ? down1 : down2;
 
-            case KeyCon.LEFT -> (spriteNum == 1) ? left1 : left2;
+            case Kkey.LEFT -> (spriteNum == 1) ? left1 : left2;
 
-            case KeyCon.RIGHT -> (spriteNum == 1) ? right1 : right2;
+            case Kkey.RIGHT -> (spriteNum == 1) ? right1 : right2;
 
             default -> throw new RuntimeException();
         };

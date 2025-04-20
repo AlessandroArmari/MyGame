@@ -1,6 +1,6 @@
 package org.example.constants;
 
-public class KeyCon {
+public class Kkey {
 
     public static final String UP = "up";
     public static final String DOWN = "down";

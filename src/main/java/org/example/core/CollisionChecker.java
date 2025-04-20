@@ -1,6 +1,6 @@
 package org.example.core;
 
-import org.example.constants.KeyCon;
+import org.example.constants.Kkey;
 import org.example.constants.Kgra;
 import org.example.constants.Ktile;
 import org.example.entity.ext.Entity;
@@ -29,7 +29,7 @@ public class CollisionChecker {
         int tileNum1, tileNum2;
 
         switch (entity.direction) {
-            case KeyCon.UP:
+            case Kkey.UP:
                 entityTopRow = (entityTopWorldY - entity.speed) / Kgra.tileSize;
                 tileNum1 = gp.tileM.mapTileNum[entityLeftCol][entityTopRow];    // -> punto alto a sinistra del quadrato interno
                 tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityTopRow];   // -> punto alto a destra del quadrato interno
@@ -40,8 +40,8 @@ public class CollisionChecker {
                 if (Ktile.mapIntTile.get(tileNum1).collision ||
                         Ktile.mapIntTile.get(tileNum2).collision) {
                     entity.collisionOn = true;
-
                 }
+                break;
         }
 
     }
