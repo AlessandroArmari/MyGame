@@ -4,11 +4,13 @@ package org.example.entity;
 import org.example.constants.GameCon;
 import org.example.constants.Kgra;
 import org.example.constants.KeyCon;
+import org.example.core.GamePanel;
 import org.example.core.KeyHandler;
 import org.example.entity.ext.Entity;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+
 
 
 public class Player extends Entity {
@@ -17,12 +19,16 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
 
-    public Player() {
+    public GamePanel gp;
+
+    public Player(GamePanel gp) {
+
+        this.gp = gp;
 
         this.screenX = Kgra.screenWidth / 2 - Kgra.tileSize / 2;  // ->  - Kgra.tileSize / 2 -> questa parte finale per centrarlo 100%
         this.screenY = Kgra.screenHeight / 2 - Kgra.tileSize / 2;
 
-        solidArea = new Rectangle(
+        solidArea = new Rectangle( // il rettangolo comodo per la visualizzazione
                 screenX + 12,
                 screenY + 13,
                 Kgra.tileSize - (Kgra.tileSize / 2),
@@ -65,6 +71,9 @@ public class Player extends Entity {
             this.worldX += GameCon.playerSpeed;
             extracted(KeyCon.RIGHT);
         }
+
+        collisionOn = false;
+
 
 
     }

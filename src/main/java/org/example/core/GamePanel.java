@@ -11,11 +11,12 @@ import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable {
 
-    public Player player = new Player();
+    public Player player = new Player(this);
     Thread gameThread;
     GameLoop gameLoop = new GameLoop();
     KeyHandler kh = new KeyHandler();
     TileManager tileM = new TileManager(this);
+    CollisionChecker cChecker = new CollisionChecker(this);
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(Kgra.screenWidth, Kgra.screenHeight));
