@@ -91,7 +91,6 @@ public class Player extends Entity {
         if (kh.rightPressed) {
             extracted(Kkey.RIGHT);
         }
-
     }
 
     private void extracted(String direction) {
@@ -102,7 +101,8 @@ public class Player extends Entity {
         collisionOn = false;
         gp.cChecker.checkTile(this); // --> questo può cambiare collisionOn a true
 
-        //SE collisionOn è true dopo checkTile(this) -> il char può moversi
+        //SE collisionOn è FALSE dopo checkTile(this) -> il char può moversi
+         //--> ALTRIMENTI niente
         if (!collisionOn) {
             switch (direction) {
                 case Kkey.UP -> this.worldY -= GameCon.playerSpeed;
