@@ -77,44 +77,20 @@ public class Player extends Entity {
     public void update(KeyHandler kh) {
 
         if (kh.upPressed) {
-
             extracted(Kkey.UP);
         }
 
         if (kh.downPressed) {
-            this.worldY += GameCon.playerSpeed;
             extracted(Kkey.DOWN);
         }
 
         if (kh.leftPressed) {
-            this.worldX -= GameCon.playerSpeed;
             extracted(Kkey.LEFT);
-
         }
 
         if (kh.rightPressed) {
-            this.worldX += GameCon.playerSpeed;
             extracted(Kkey.RIGHT);
         }
-
-
-
-        /*
-        //SE collisionOn è true dopo checkTile(this) -> il char può moversi
-        if (collisionOn == false) {
-            switch (direction) {
-                case Kkey.UP -> {
-                    this.worldY -= GameCon.playerSpeed;
-                    walkingAnimation();
-                    System.out.println("worldX=" + worldX + ", worldY = " + worldY);
-
-                }
-            }
-        }
-
-         */
-
-
 
     }
 
@@ -129,13 +105,13 @@ public class Player extends Entity {
         //SE collisionOn è true dopo checkTile(this) -> il char può moversi
         if (!collisionOn) {
             switch (direction) {
-                case Kkey.UP -> {
-                    this.worldY -= GameCon.playerSpeed;
-                    //this.worldY -= GameCon.playerSpeed;
-                    //walkingAnimation();
-                    System.out.println("worldX=" + worldX + ", worldY = " + worldY);
+                case Kkey.UP -> this.worldY -= GameCon.playerSpeed;
 
-                }
+                case Kkey.DOWN -> this.worldY += GameCon.playerSpeed;
+
+                case Kkey.LEFT -> this.worldX -= GameCon.playerSpeed;
+
+                case Kkey.RIGHT -> this.worldX += GameCon.playerSpeed;
             }
         }
 

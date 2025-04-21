@@ -29,19 +29,58 @@ public class CollisionChecker {
         int tileNum1, tileNum2;
 
         switch (entity.direction) {
+
+                /*
+                se anche solo 1 dei 2 estremi tocca un tile esterno che ha il 'collision' a true
+                esempio -> se vai verso su e uno degli estremi del quadrato interno tocca water o wall
+                setto il valore di collisionOn del Char a true
+                 */
+
             case Kkey.UP:
                 entityTopRow = (entityTopWorldY - entity.speed) / Kgra.tileSize;
                 tileNum1 = gp.tileM.mapTileNum[entityLeftCol][entityTopRow];    // -> punto alto a sinistra del quadrato interno
                 tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityTopRow];   // -> punto alto a destra del quadrato interno
 
-                // se anche solo 1 dei 2 estremi tocca un tile esterno che ha il 'collision' a true
-                // esempio -> se vai verso su e uno degli estremi del quadrato interno tocca water o wall
-                // setto il valore di collisionOn del Char a true
                 if (Ktile.mapIntTile.get(tileNum1).collision ||
                         Ktile.mapIntTile.get(tileNum2).collision) {
                     entity.collisionOn = true;
                 }
                 break;
+
+            case Kkey.DOWN:
+                entityBottomRow = (entityBottomWorldY + entity.speed) / Kgra.tileSize;
+                tileNum1 = gp.tileM.mapTileNum[entityLeftCol][entityBottomRow];    // -> punto alto a sinistra del quadrato interno
+                tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityBottomRow];   // -> punto alto a destra del quadrato interno
+
+                if (Ktile.mapIntTile.get(tileNum1).collision ||
+                        Ktile.mapIntTile.get(tileNum2).collision) {
+                    entity.collisionOn = true;
+                }
+                break;
+
+            case Kkey.LEFT:
+                entityLeftCol = (entityLeftWorldX - entity.speed) / Kgra.tileSize;
+                tileNum1 = gp.tileM.mapTileNum[entityLeftCol][entityTopRow];    // -> punto alto a sinistra del quadrato interno
+                tileNum2 = gp.tileM.mapTileNum[entityLeftCol][entityBottomRow];   // -> punto alto a destra del quadrato interno
+
+                if (Ktile.mapIntTile.get(tileNum1).collision ||
+                        Ktile.mapIntTile.get(tileNum2).collision) {
+                    entity.collisionOn = true;
+                }
+                break;
+
+            case Kkey.RIGHT:
+                entityRightCol = (entityRightWorldX + entity.speed) / Kgra.tileSize;
+                tileNum1 = gp.tileM.mapTileNum[entityRightCol][entityTopRow];    // -> punto alto a sinistra del quadrato interno
+                tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityBottomRow];   // -> punto alto a destra del quadrato interno
+
+                if (Ktile.mapIntTile.get(tileNum1).collision ||
+                        Ktile.mapIntTile.get(tileNum2).collision) {
+                    entity.collisionOn = true;
+                }
+                break;
+
+
         }
 
     }
