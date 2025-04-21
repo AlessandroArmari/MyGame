@@ -9,18 +9,18 @@ public class Ktile {
 
 
     public static Tile field0() {
-        return new Tile(ImageUtil.getPathUri("tile", "field0"), false);
+        return new Tile(ImageUtil.getBuffImg("tile", "field0"), false);
     }
 
     public static Tile water1() {
-        return new Tile(ImageUtil.getPathUri("tile", "water1"), true);
+        return new Tile(ImageUtil.getBuffImg("tile", "water1"), true);
     }
 
-    public static Tile wall2() {return new Tile(ImageUtil.getPathUri("tile", "wall2"), true);}
+    public static Tile wall2() {return new Tile(ImageUtil.getBuffImg("tile", "wall2"), true);}
 
-    public static Tile sand3() {return new Tile(ImageUtil.getPathUri("tile", "sand3"), false);}
+    public static Tile sand3() {return new Tile(ImageUtil.getBuffImg("tile", "sand3"), false);}
 
-    public static Tile stone4() {return new Tile(ImageUtil.getPathUri("tile", "stone4"), false);}
+    public static Tile stone4() {return new Tile(ImageUtil.getBuffImg("tile", "stone4"), false);}
 
 
     public static Map<Integer, Tile> mapIntTile = Map.of(

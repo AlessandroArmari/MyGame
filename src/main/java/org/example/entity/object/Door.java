@@ -1,4 +1,6 @@
 package org.example.entity.object;
 
-public class Door {
+import org.example.entity.ext.SuperObject;
+
+public class Door extends SuperObject {
 }

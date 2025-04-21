@@ -42,7 +42,6 @@ public class Player extends Entity {
 
         /*
                          48
-
                 |------------------|
                 |                  |
                 |                  |
@@ -51,9 +50,6 @@ public class Player extends Entity {
                 |     |      |     |
                 |-----|------|-----|
                          24
-
-                        48
-
          */
 
         this.rectangleWidth = Kgra.tileSize - (Kgra.tileSize / 2);   //24
