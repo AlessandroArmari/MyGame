@@ -56,11 +56,11 @@ public class Player extends Entity {
 
          */
 
-        this.rectangleWidth = Kgra.tileSize - (Kgra.tileSize / 2);
-        this.rectangleHeight = Kgra.tileSize - (Kgra.tileSize / 3);
+        this.rectangleWidth = Kgra.tileSize - (Kgra.tileSize / 2);   //24
+        this.rectangleHeight = Kgra.tileSize - (Kgra.tileSize / 3);  //32
 
         return new Rectangle( // il rettangolo comodo per la visualizzazione
-                8,16,
+                12,16,
                 rectangleWidth,
                 rectangleHeight
         );
@@ -158,7 +158,9 @@ public class Player extends Entity {
         };
 
         g2.drawImage(image, screenX, screenY, Kgra.tileSize, Kgra.tileSize, null);
-        g2.drawRect(screenX + (rectangleWidth/2), screenY + (rectangleHeight/2), rectangleWidth, rectangleHeight);
+        //g2.drawRect(screenX + (rectangleWidth/2), screenY + (rectangleHeight/2), rectangleWidth, rectangleHeight);
+        g2.drawRect(screenX , screenY , Kgra.tileSize, Kgra.tileSize);
+
     }
 
 }
