@@ -1,5 +1,6 @@
 package org.example.core;
 
+import org.example.constants.Kgra;
 import org.example.entity.object.Key;
 
 public class AssetSetter {
@@ -12,7 +13,7 @@ public class AssetSetter {
 
     public void setObject() {
 
-        gp.obj.add(new Key(12,12));
-        gp.obj.add(new Key(24,24));
+        gp.obj.add(new Key(12 * Kgra.tileSize,12 * Kgra.tileSize));
+        gp.obj.add(new Key(24 * Kgra.tileSize,24 * Kgra.tileSize));
     }
 }
