@@ -102,7 +102,8 @@ public class Player extends Entity {
         gp.cChecker.checkTile(this); // --> questo può cambiare collisionOn a true
 
         //SE collisionOn è FALSE dopo checkTile(this) -> il char può moversi
-         //--> ALTRIMENTI niente
+        //ALTRIMENTI --> niente
+
         if (!collisionOn) {
             switch (direction) {
                 case Kkey.UP -> this.worldY -= GameCon.playerSpeed;
