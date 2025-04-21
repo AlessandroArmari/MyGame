@@ -25,7 +25,7 @@ public class TileManager {
     public void loadMap() {
         try {
 
-            InputStream is = getClass().getResourceAsStream("/Map/world01.txt");
+            InputStream is = getClass().getResourceAsStream("/map/world01.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             int rowCounter = 0;

@@ -25,13 +25,13 @@ public abstract class Entity {
     }
 
     public void getImage() {
-        up1 = ImageUtil.getPathUri("Character/Man", "up1");
-        up2 = ImageUtil.getPathUri("Character/Man", "up2");
-        down1 = ImageUtil.getPathUri("Character/Man", "down1");
-        down2 = ImageUtil.getPathUri("Character/Man", "down2");
-        left1 = ImageUtil.getPathUri("Character/Man", "left1");
-        left2 = ImageUtil.getPathUri("Character/Man", "left2");
-        right1 = ImageUtil.getPathUri("Character/Man", "right1");
-        right2 = ImageUtil.getPathUri("Character/Man", "right2");
+        up1 = ImageUtil.getPathUri("character/Man", "up1");
+        up2 = ImageUtil.getPathUri("character/Man", "up2");
+        down1 = ImageUtil.getPathUri("character/Man", "down1");
+        down2 = ImageUtil.getPathUri("character/Man", "down2");
+        left1 = ImageUtil.getPathUri("character/Man", "left1");
+        left2 = ImageUtil.getPathUri("character/Man", "left2");
+        right1 = ImageUtil.getPathUri("character/Man", "right1");
+        right2 = ImageUtil.getPathUri("character/Man", "right2");
     }
 }
