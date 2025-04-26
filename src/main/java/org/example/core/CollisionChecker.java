@@ -66,4 +66,26 @@ public class CollisionChecker {
 
     }
 
+    //confronto collision tra un 'entity' (quasi sempre il player)
+    // e la lista degli oggetti
+    public int checkObject(Entity entity, boolean isPlayer) { // -> boolean perchè potrei usare questo metodo NON SOLAMENTE per il player
+
+        int index = 999;
+
+        gp.obj.forEach( obj -> {
+
+            if (obj != null) {
+                //ottengo x e y del quadrato interno
+                entity.solidArea.x = entity.worldX + entity.solidArea.x;
+                entity.solidArea.y = entity.worldY + entity.solidArea.y;
+
+                //ottengo uno alla volta x e y degli oggetti
+                obj.solidArea.x = obj.worldX + obj.solidArea.x;
+                obj.solidArea.y = obj.worldY + obj.solidArea.y;
+            }
+        });
+
+        return index;
+    }
+
 }
