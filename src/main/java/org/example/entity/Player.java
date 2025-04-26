@@ -32,12 +32,17 @@ public class Player extends Entity {
 
         solidArea = rectangleCreator();
 
+        //salvo le coordinate della solidArea
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
+
         setDeafultValues();
 
         getImage();
 
     }
 
+    //genero il rattangolo interno
     private Rectangle rectangleCreator() {
 
         /*
