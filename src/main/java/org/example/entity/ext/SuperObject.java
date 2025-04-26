@@ -22,7 +22,5 @@ public class SuperObject {
         DrawUtil.DrawTileOrObject(worldX, worldY, gp, g2, image);
     }
 
-    public String getName() {
-        return name;
-    }
+
 }

@@ -23,6 +23,8 @@ public class Player extends Entity {
 
     public GamePanel gp;
 
+    public int hasKey;
+
     public Player(GamePanel gp) {
 
         this.gp = gp;
@@ -128,12 +130,31 @@ public class Player extends Entity {
         }
 
         walkingAnimation();
-        System.out.println("worldX=" + worldX + ", worldY = " + worldY);
+        //wdSystem.out.println("worldX=" + worldX + ", worldY = " + worldY);
     }
 
     private void pickUpObject(int index) {
+
+        ///9999999 è la situazione di default
         if (index != 9999999) {
-            gp.obj.remove(index);
+
+            switch (gp.obj.get(index).name) {
+
+                case "key" -> {
+                    hasKey++;
+                    System.out.println("add 1 key, now you have= " + hasKey);
+                    gp.obj.remove(index); // -> la key la elimino dalla lista
+                }
+
+                case "door" -> {
+                    if (hasKey > 0) {
+                        System.out.println("hasKey= " + hasKey + ", so open the door");
+                        gp.obj.remove(index);
+                        hasKey--;
+                    }
+                }
+
+            }
         }
     }
 

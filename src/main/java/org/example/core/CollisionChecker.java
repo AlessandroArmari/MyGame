@@ -6,8 +6,6 @@ import org.example.constants.Ktile;
 import org.example.entity.ext.Entity;
 import org.example.entity.ext.SuperObject;
 
-import java.util.concurrent.atomic.AtomicReference;
-
 public class CollisionChecker {
 
     GamePanel gp;
@@ -95,7 +93,7 @@ public class CollisionChecker {
                     case Kkey.UP -> {
                         entity.solidArea.y -= entity.speed;
                         index = extracted(entity, obj, Kkey.UP, isPlayer, index, i);
-                        System.out.println(index);
+                        //System.out.println(index);
                     }
 
                     case Kkey.DOWN -> {
