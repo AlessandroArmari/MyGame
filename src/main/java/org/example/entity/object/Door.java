@@ -7,6 +7,7 @@ public class Door extends SuperObject {
 
     public Door(Integer worldX, Integer worldY) {
         name = "door";
+        collision = true;
         image = DrawUtil.getBuffImg("object","door");
         this.worldX = worldX;
         this.worldY = worldY;
