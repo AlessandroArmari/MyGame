@@ -100,7 +100,16 @@ public class Player extends Entity {
 
         //controllare Collision del quadrato interno
         collisionOn = false;
+
+        //CHECK TYLE
         gp.cChecker.checkTile(this); // --> questo può cambiare collisionOn a true
+
+        //CHECK OBJECT
+        gp.cChecker.checkObject(this, true);
+
+
+
+
 
         //SE collisionOn è FALSE dopo checkTile(this) -> il char può moversi
         //ALTRIMENTI --> niente

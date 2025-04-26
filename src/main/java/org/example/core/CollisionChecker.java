@@ -75,7 +75,7 @@ public class CollisionChecker {
         int index = 999;
 
         //ciclo tutti gli oggetti
-        gp.obj.forEach( obj -> {
+        gp.obj.forEach(obj -> {
 
             if (obj != null) {
                 //ottengo x e y del quadrato interno
@@ -126,9 +126,9 @@ public class CollisionChecker {
 
     private static void extracted(Entity entity, SuperObject obj, String direction) {
 
-        if (entity.solidArea.intersects(entity.solidArea)) {
-            System.out.printf("Collision with %s, Direction %s", obj.name, direction);
+        if (entity.solidArea.intersects(obj.solidArea)) {
+            System.out.println(String.format("Collision with %s, Direction %s", obj.name, direction));
         }
-    }
 
+    }
 }
