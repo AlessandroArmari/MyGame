@@ -1,9 +1,11 @@
 package org.example.core;
 
+import org.example.constants.GameCon;
 import org.example.constants.Kkey;
 import org.example.constants.Kgra;
 import org.example.constants.Ktile;
 import org.example.entity.ext.Entity;
+import org.example.entity.ext.SuperObject;
 
 public class CollisionChecker {
 
@@ -72,6 +74,7 @@ public class CollisionChecker {
 
         int index = 999;
 
+        //ciclo tutti gli oggetti
         gp.obj.forEach( obj -> {
 
             if (obj != null) {
@@ -82,10 +85,50 @@ public class CollisionChecker {
                 //ottengo uno alla volta x e y degli oggetti
                 obj.solidArea.x = obj.worldX + obj.solidArea.x;
                 obj.solidArea.y = obj.worldY + obj.solidArea.y;
+
+                // adesso simulo la posizione dell'entity col movimento (aggiungo o sottraggo la speed)
+                switch (entity.direction) {
+                    case Kkey.UP -> {
+                        entity.solidArea.y -= entity.speed;
+                        extracted(entity, obj, Kkey.UP);
+                    }
+
+                    case Kkey.DOWN -> {
+                        entity.solidArea.y += entity.speed;
+                        extracted(entity, obj, Kkey.DOWN);
+                    }
+
+                    case Kkey.LEFT -> {
+                        entity.solidArea.x -= entity.speed;
+                        extracted(entity, obj, Kkey.LEFT);
+                    }
+
+                    case Kkey.RIGHT -> {
+                        entity.solidArea.x += entity.speed;
+                        extracted(entity, obj, Kkey.RIGHT);
+                    }
+                }
+
+                // resetto x e y del quadrato interno dell'entity (player)
+                entity.solidArea.x = entity.solidAreaDefaultX;
+                entity.solidArea.y = entity.solidAreaDefaultY;
+
+                // resetto x e y dell'oggeto -> siamo in un cilo, quindi lo faccio per tutti
+                obj.solidArea.x = obj.solidAreaDefaultX;
+                obj.solidArea.y = obj.solidAreaDefaultY;
+
+
             }
         });
 
         return index;
+    }
+
+    private static void extracted(Entity entity, SuperObject obj, String direction) {
+
+        if (entity.solidArea.intersects(entity.solidArea)) {
+            System.out.printf("Collision with %s, Direction %s", obj.name, direction);
+        }
     }
 
 }
