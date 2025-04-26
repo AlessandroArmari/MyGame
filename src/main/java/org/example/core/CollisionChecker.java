@@ -1,11 +1,12 @@
 package org.example.core;
 
-import org.example.constants.GameCon;
 import org.example.constants.Kkey;
 import org.example.constants.Kgra;
 import org.example.constants.Ktile;
 import org.example.entity.ext.Entity;
 import org.example.entity.ext.SuperObject;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 public class CollisionChecker {
 
@@ -72,11 +73,14 @@ public class CollisionChecker {
     // e la lista degli oggetti
     public int checkObject(Entity entity, boolean isPlayer) { // -> boolean perchè potrei usare questo metodo NON SOLAMENTE per il player
 
-        int index = 999;
+        //999999 come finto index inarrivabile
+        Integer index = 9999999;
 
-        //ciclo tutti gli oggetti
-        gp.obj.forEach(obj -> {
+        for (int i = 0; i < gp.obj.size(); i++) {
 
+            SuperObject obj = gp.obj.get(i);
+
+            //ciclo tutti gli oggetti
             if (obj != null) {
                 //ottengo x e y del quadrato interno
                 entity.solidArea.x = entity.worldX + entity.solidArea.x;
@@ -90,22 +94,23 @@ public class CollisionChecker {
                 switch (entity.direction) {
                     case Kkey.UP -> {
                         entity.solidArea.y -= entity.speed;
-                        extracted(entity, obj, Kkey.UP);
+                        index = extracted(entity, obj, Kkey.UP, isPlayer, index, i);
+                        System.out.println(index);
                     }
 
                     case Kkey.DOWN -> {
                         entity.solidArea.y += entity.speed;
-                        extracted(entity, obj, Kkey.DOWN);
+                        index = extracted(entity, obj, Kkey.DOWN, isPlayer, index, i);
                     }
 
                     case Kkey.LEFT -> {
                         entity.solidArea.x -= entity.speed;
-                        extracted(entity, obj, Kkey.LEFT);
+                        index = extracted(entity, obj, Kkey.LEFT, isPlayer, index, i);
                     }
 
                     case Kkey.RIGHT -> {
                         entity.solidArea.x += entity.speed;
-                        extracted(entity, obj, Kkey.RIGHT);
+                        index = extracted(entity, obj, Kkey.RIGHT, isPlayer, index, i);
                     }
                 }
 
@@ -119,16 +124,25 @@ public class CollisionChecker {
 
 
             }
-        });
+        }
 
         return index;
     }
 
-    private static void extracted(Entity entity, SuperObject obj, String direction) {
+    private int extracted(Entity entity, SuperObject obj, String direction, boolean isPlayer, Integer index, Integer indexInTheList) {
 
         if (entity.solidArea.intersects(obj.solidArea)) {
             System.out.println(String.format("Collision with %s, Direction %s", obj.name, direction));
+
+            entity.collisionOn = true; //come per i tile setto collisionOn a true
+
+            if (isPlayer) {
+                index = indexInTheList;
+                return index;
+            }
+
         }
 
+        return index;
     }
 }

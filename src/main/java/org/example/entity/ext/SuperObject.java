@@ -21,4 +21,8 @@ public class SuperObject {
     public void draw(Graphics2D g2, GamePanel gp) {
         DrawUtil.DrawTileOrObject(worldX, worldY, gp, g2, image);
     }
+
+    public String getName() {
+        return name;
+    }
 }

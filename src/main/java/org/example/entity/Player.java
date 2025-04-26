@@ -105,8 +105,9 @@ public class Player extends Entity {
         gp.cChecker.checkTile(this); // --> questo può cambiare collisionOn a true
 
         //CHECK OBJECT
-        gp.cChecker.checkObject(this, true);
+        int index = gp.cChecker.checkObject(this, true); // --> anche questo come sopra
 
+        pickUpObject(index);
 
 
 
@@ -128,6 +129,12 @@ public class Player extends Entity {
 
         walkingAnimation();
         System.out.println("worldX=" + worldX + ", worldY = " + worldY);
+    }
+
+    private void pickUpObject(int index) {
+        if (index != 9999999) {
+            gp.obj.remove(index);
+        }
     }
 
     private void walkingAnimation() {
