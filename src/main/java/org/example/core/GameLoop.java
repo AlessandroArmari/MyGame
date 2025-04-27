@@ -1,6 +1,6 @@
 package org.example.core;
 
-import org.example.constants.GameCon;
+import org.example.constants.Kgame;
 
 public class GameLoop {
 
@@ -17,7 +17,7 @@ public class GameLoop {
 
             Thread.sleep((long) remainingTime);
 
-            return nextDrawTime + GameCon.drawInterval;
+            return nextDrawTime + Kgame.drawInterval;
 
         } catch (InterruptedException e) {
             throw new RuntimeException("Eccezione nel gameLoop: " + e.getMessage());

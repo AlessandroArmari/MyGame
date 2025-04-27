@@ -1,7 +1,7 @@
 package org.example.entity;
 
 
-import org.example.constants.GameCon;
+import org.example.constants.Kgame;
 import org.example.constants.Kgra;
 import org.example.constants.Kkey;
 import org.example.core.GamePanel;
@@ -72,7 +72,7 @@ public class Player extends Entity {
     public void setDeafultValues() {
         worldX = Kgra.tileSize * 23;
         worldY = Kgra.tileSize * 21;
-        speed = GameCon.playerSpeed;
+        speed = Kgame.playerSpeed;
         direction = Kkey.DOWN;
     }
 
@@ -119,13 +119,13 @@ public class Player extends Entity {
 
         if (!collisionOn) {
             switch (direction) {
-                case Kkey.UP -> this.worldY -= GameCon.playerSpeed;
+                case Kkey.UP -> this.worldY -= Kgame.playerSpeed;
 
-                case Kkey.DOWN -> this.worldY += GameCon.playerSpeed;
+                case Kkey.DOWN -> this.worldY += Kgame.playerSpeed;
 
-                case Kkey.LEFT -> this.worldX -= GameCon.playerSpeed;
+                case Kkey.LEFT -> this.worldX -= Kgame.playerSpeed;
 
-                case Kkey.RIGHT -> this.worldX += GameCon.playerSpeed;
+                case Kkey.RIGHT -> this.worldX += Kgame.playerSpeed;
             }
         }
 

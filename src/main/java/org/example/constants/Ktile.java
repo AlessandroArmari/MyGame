@@ -22,13 +22,16 @@ public class Ktile {
 
     public static Tile stone4() {return new Tile(DrawUtil.getBuffImg("tile", "stone4"), false);}
 
+    public static Tile tree5() {return new Tile(DrawUtil.getBuffImg("tile", "tree5"), true);}
+
 
     public static Map<Integer, Tile> mapIntTile = Map.of(
             0, field0(),
             1, water1(),
             2, wall2(),
             3, sand3(),
-            4, stone4()
+            4, stone4(),
+            5, tree5()
     );
 
 

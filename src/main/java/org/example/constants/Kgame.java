@@ -1,6 +1,6 @@
 package org.example.constants;
 
-public class GameCon {
+public class Kgame {
 
     public static int FPS = 60;
 

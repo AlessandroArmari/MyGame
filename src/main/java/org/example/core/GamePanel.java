@@ -1,6 +1,6 @@
 package org.example.core;
 
-import org.example.constants.GameCon;
+import org.example.constants.Kgame;
 import org.example.constants.Kgra;
 import org.example.entity.Player;
 import org.example.entity.ext.SuperObject;
@@ -47,7 +47,7 @@ public class GamePanel extends JPanel implements Runnable {
     public void run() {
 
         //prossimo TIME di aggiornamento
-        Double nextDrawTime = System.nanoTime() + GameCon.drawInterval;
+        Double nextDrawTime = System.nanoTime() + Kgame.drawInterval;
 
         while (gameThread.isAlive()) {
 
